@@ -27,7 +27,7 @@ namespace ConsoleUI
             catch (DivideByZeroException ex)
             {
 
-                log.Error("Developer: we divide by zero", ex);
+                log.Error("Developer: we divide by zero");
             }
 
             log.Fatal("Maintance: Water pump exploded!");
