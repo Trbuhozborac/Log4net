@@ -14,9 +14,23 @@ namespace ConsoleUI
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Pokrenuo si Log4Net");
+            log.Debug("Developer: Tutorial was run");
+            log.Info("Maintance: water pump turned on");
+            log.Warn("Maintance: the water pump is getting hot");
 
-            log.Error("This is my error message");
+            var i = 0;
+
+            try
+            {
+                var x = 10 / i;
+            }
+            catch (DivideByZeroException ex)
+            {
+
+                log.Error("Developer: we divide by zero", ex);
+            }
+
+            log.Fatal("Maintance: Water pump exploded!");
 
             Console.ReadLine();
         }
